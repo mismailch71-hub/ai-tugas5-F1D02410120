@@ -1,0 +1,46 @@
+{
+    "judul": "Sistem Pakar Penentuan Status Bahaya dan Penanganan Kebakaran",
+    "batas": "Aturan disusun berdasarkan penelitian Jurnal Tatalola Undip (Susanti et al., 2020), Jurnal Aksitektura UNS (Tampubolon et al., 2020), serta panduan resmi Dinas Damkar Jakarta. Hasil sistem ini merupakan penilaian awal untuk kesiapsiagaan Lingkungan/gedung, bukan keputusan resmi dinas terkait.",
+    "sumber": {
+        "S1": "Sutanti el al. (2020), Analisis Risiko Kebakaran, Jurnal Tatalola UNDIP, https://doi.org/10.14710/tataloka.22.2.162-174, diakses 4 Nov 2026",
+        "S2": "Layanan Penanggulangan Kebakaran, Dinas Damkar DKI Jakarta, https://pemadam.jakarta.go.id, diakses 4 Nov 2026",
+        "S3": "Tampubolon et al. (2020), Studi Literatur Pencegahan Kebakaran, Jurnal Arsitektur  UNS, https://doi.org/10.20961/arst.v18i2.44957, diakses 4 Nov 2026"
+    },
+    "aturan": [
+        {
+            "id": "R1",
+            "jika": ["terdeteksi asap tebal", "terdengar bunyi alarm kebakaran"],
+            "mode": "dan",
+            "maka": "terindikasi adanya titik api",
+            "sumber": "S3"
+        },
+        {
+            "id": "R2",
+            "jika": ["terdapa bau korsleting listrik", "terdapat bau kebocoran gas"],
+            "mode": "atau",
+            "maka": "bahaya pemicu api aktif",
+            "sumber": "S1"
+        },
+        {
+            "id": "R3",
+            "jika": ["terindikasi adanya titik api", "bahaya pemicu api aktif"],
+            "mode": "dan",
+            "maka": "potensi kebakaran meluas",
+            "sumber": "S1"
+        },
+        {
+            "id": "R4",
+            "jika": ["potensi kebakaran meluas", "api masih terlokalisir"],
+            "mode": "dan",
+            "maka": "Status Siaga 2 (Penanganan Mandiri dengan APAR)",
+            "sumber": "S2"
+        },
+        {
+            "id": "R5",
+            "jika": ["potensi kebakaran meluas", "api sudah merambat ke struktur bangunan"],
+            "mode": "dan",
+            "maka": "Status Siaga 2 (Bahaya Tinggi/Evakuasi dan Panggil Damkar)",
+            "sumber": "S2"
+        }
+    ]
+}
