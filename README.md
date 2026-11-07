@@ -11,3 +11,11 @@ Aplikasi sistem pakar ini mengambil topik mengenai penentuan status bahaya dan p
 2. S2: Dinas Penanggulangan Kebakaran dan Penyelamatan Provinsi DKI Jakarta. Layanan dan Edukasi Penanggulangan Kebakaran Pemukiman. Dinas Pemadam Kebakaran DKI Jakarta.
    URL: [https://pemadam.jakarta.go.id](https://pemadam.jakarta.go.id) (Diakses 4 November 2026)
 3. S3: Tampubolon, M. V., Tambunan, L., & Agirahman, F. A. (2020). Studi Literatur Pencegahan Bahaya Kebakaran pada Pemukiman Masyarakat dan Penerapannya. Jurnal Arsitektura (UNS), Vol. 18 No. 2, hal. 351-360.
+### Tabel Aturan IF-THEN
+|Aturan|IF(Premis/Syarat)|Then(Hasil/Kesimpulan)|Sumber|
+|:---|:---|:---|:---|
+|R1|
+|
+|
+|
+|
