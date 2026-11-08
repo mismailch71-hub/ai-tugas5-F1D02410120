@@ -26,7 +26,7 @@ Alasan: Metode Forward Chaining bekerja secara data-driven, yaitu dimulai dengan
 
 ## 4. Tiga Kasus Uji dan Screenshoot
 ### Tabel Kasus Uji
-|#|Jawaban "Yes" Pengguna(Fakta Awal)|Kesimpulan yang Diharapkan|
+||Jawaban "Yes" Pengguna(Fakta Awal)|Kesimpulan yang Diharapkan|
 |:---|:---|:---|
 |1|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau korsleting listrik', 'api masih terlokalisir'|Status Siaga 2(Penanganan Mandiri dengan APAR)|
 |2|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau kebocoran gas', 'api sudah merambat ke struktur bangunan'|Status Siaga 1(Bahaya Tinggi/Evakuasi dan Panggil Damkar)|
