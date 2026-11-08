@@ -26,15 +26,15 @@ Alasan: Metode Forward Chaining bekerja secara data-driven, yaitu dimulai dengan
 
 ## 4. Tiga Kasus Uji dan Screenshoot
 ### Tabel Kasus Uji
-|#|Jawaban "Yes" Pengguna(Fakta Awal)|Kesimpulan yang Diharapkan|
+||Jawaban "Yes" Pengguna(Fakta Awal)|Kesimpulan yang Diharapkan|
 |:---|:---|:---|
 |1|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau korsleting listrik', 'api masih terlokalisir'|Status Siaga 2(Penanganan Mandiri dengan APAR)|
 |2|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau kebocoran gas', 'api sudah merambat ke struktur bangunan'|Status Siaga 1(Bahaya Tinggi/Evakuasi dan Panggil Damkar)|
 |3| 'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran' (tanpa pemicu dan perambatan)|Status Aman/Potensi Rendah (Kasus Negatif)|
 ### Screenshot hasil Pengujian
-![Kasus Uji 1](screenshotkasus-1.png)
-![Kasus Uji 2](screenshotkasus-2.png)
-![Kasus Uji 3](screenshotkasus-3.png)
+![Kasus Uji 1](screenshot/kasus-1.png)
+![Kasus Uji 2](screenshot/kasus-2.png)
+![Kasus Uji 3](screenshot/kasus-3.png)
 
 ## 5. Batas Keberlakuan
 Aturan dalam sistem pakar ini disusun berdasarkan penelitian ilmiah dari Jurnal Tataloka UNDIP (Sutanti et., 2020), Jurnal Arsitektura UNS (Tampubolon et al., 2020), serta panduan edukasi resmi dari Dinas Penanggulangan Kebakaran dan Penyelamatan DKI Jakarta. Sistem ini dirancang khusus untuk penelitian awal dan kesiapsiagaan bahaya pada lingkungan atau bangunan gedung skala kecil hingga menengah. Hasil kesimpulan dan saran tindakan dari aplikasi ini merupakan panduan pertolongan pertama serta rekomendasi awal kesiapsiagaan mandiri, bukan instrumen atau keputusan resmi dari dinas pemadam kebakaran setempat.
