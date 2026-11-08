@@ -14,8 +14,30 @@ Aplikasi sistem pakar ini mengambil topik mengenai penentuan status bahaya dan p
 ### Tabel Aturan IF-THEN
 |Aturan|IF(Premis/Syarat)|Then(Hasil/Kesimpulan)|Sumber|
 |:---|:---|:---|:---|
-|R1|
-|
-|
-|
-|
+|R1|IF terdekteksi asap tebal AND terdengar bunyi alarm Kebakaran|Then terindikasi adanya titik api|S3|
+|R2|IF terdapat bau korsleting listrik OR terdapat bau kebocoran gas|Then bahaya pemicu api aktif|S1|
+|R3|IF terindikasi adanya titik api AND bahaya pemicu api aktif|THEN potensi kebakaran meluas|S1|
+|R4|IF potensi kebakaran meluas AND api masih terlokalisir|THEN Status Siaga 2(Penanganan Mandiri dengan APAR)|S2|
+|R5|IF Potensi kebakaran meluas AND api sudah merambat ke struktur bangunan|THEN Status Siaga 1(Bahaya Tinggi/Evakuasi dan Penggil Damkar)|S2|
+
+## 3. Metode yang Dipilih dan Alasannya
+Metode: Forward Chaining (FC)
+Alasan: Metode Forward Chaining bekerja secara data-driven, yaitu dimulai dengan mengumpulkan fakta-fakta awal yang dikonfirmasi pengguna di lapangan (seperti asap tebal, bau gas/listrik, dan jangkauan api). Dari fakta-fakta tersebut, mesin inferensi secara bertahap mengeksekusi aturan berantai (R1 hingga R5) per siklus untuk menghasilkan fakta baru hingga mencapai kesimpulan tingkat status bahaya. Pendekatan ini sangat cocok untuk sistem kesiapsiagaan bencana kebakaran karena keputusan penanganan harus diambil berdasarkan temuan indikator rill yang ada di lokasi.
+
+## 4. Tiga Kasus Uji dan Screenshoot
+### Tabel Kasus Uji
+|#|Jawaban "Yes" Pengguna(Fakta Awal)|Kesimpulan yang Diharapkan|
+|:---|:---|:---|
+|1|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau korsleting listrik', 'api masih terlokalisir'|Status Siaga 2(Penanganan Mandiri dengan APAR)|
+|2|'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran', 'terdapat bau kebocoran gas', 'api sudah merambat ke struktur bangunan'|Status Siaga 1(Bahaya Tinggi/Evakuasi dan Panggil Damkar)|
+|3| 'terdeteksi asap tebal', 'terdengar bunyi alarm kebakaran' (tanpa pemicu dan perambatan)|Status Aman/Potensi Rendah (Kasus Negatif)|
+### Screenshot hasil Pengujian
+![Kasus Uji 1](image.png)
+![Kasus Uji 2](image-1.png)
+![Kasus Uji 3](image-2.png)
+
+## 5. Batas Keberlakuan
+Aturan dalam sistem pakar ini disusun berdasarkan penelitian ilmiah dari Jurnal Tataloka UNDIP (Sutanti et., 2020), Jurnal Arsitektura UNS (Tampubolon et al., 2020), serta panduan edukasi resmi dari Dinas Penanggulangan Kebakaran dan Penyelamatan DKI Jakarta. Sistem ini dirancang khusus untuk penelitian awal dan kesiapsiagaan bahaya pada lingkungan atau bangunan gedung skala kecil hingga menengah. Hasil kesimpulan dan saran tindakan dari aplikasi ini merupakan panduan pertolongan pertama serta rekomendasi awal kesiapsiagaan mandiri, bukan instrumen atau keputusan resmi dari dinas pemadam kebakaran setempat.
+
+## 6. Penggunaan Alat Bantu AI
+Alat Bantu Ai digunakan dalam penyelesaian tugas ini sebagai media diksusi untuk perancangan basis pengetahuan, penyusunan referensi sitasi 3 sumber ilmiah/resmi, pembuatan antarmuka grafis Java GUI (Swing), serta debugging alur perulangan per siklus pada logika Forward Chaining.
